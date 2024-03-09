@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css?family=Trirong');
+
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Trirong, serif;
+  font-size: 16px;
+  text-align: center;
+}
+
+/* Header Styles */
+header {
+  position: fixed; /* Positions the header on top of the page */
+  width: 100%; /* Header spans the full page width */
+  height: 100px; /* Increased height */
+  background-image: linear-gradient(to bottom, rgba(0,0,0,100), rgba(0,0,0,0)); /* Gradient background */
+  color: white; /* White text color */
+  
+  z-index: 1000; /* Ensures the header is above other content */
+  display: flex;
+  align-items: center; /* This centers the navigation vertically */
+  justify-content: center; /* This centers the navigation horizontally */
+}
+
+/* Logo Styles */
+.logo {
+  margin-left: 50px; /* Adds some space between the image and the text */
+  margin-right: auto; /* Pushes the logo to the left edge */
+}
+
+.logo img {
+  height: 60px; /* Adjust the height of the logo as needed */
+  width: auto; /* Allows the width to adjust automatically */
+}
+
+
+
+nav {
+  display: flex;
+  margin-right: 50px;
+}
+
+nav ul {
+  list-style: none; /* Removes bullet points from the list */
+  padding: 0;
+  margin: 0;
+  display: flex; /* Aligns links in a row */
+  justify-content: center; /* Centers the navigation links */
+}
+
+nav ul li {
+  margin: 0 20px; /* Spacing between links */
+}
+
+nav ul li a {
+  color: white; /* Sets the link color to white */
+  text-decoration: none; /* Removes underline from links */
+  font-size: 16px; /* Adjust as needed */
+}
+
+
+
+
+
+
+
+.bg {
+  /* The image used */
+  background-image: url("References/img/ele2.jpg");
+
+  /* Full height */
+  height: 75%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+p {
+  margin: 20px auto; /* Adjust as needed */
+  padding: 20px;
+  width: 100%; /* Adjust the width as needed, or use max-width for responsiveness */
+  max-width: 800px; /* Good for readability */
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background for better readability */
+  border-radius: 10px; /* Soften the edges */
+  color: #333; /* Dark color for the text */
+  font-size: 1em; /* Adjust based on preference */
+  line-height: 1.6; /* Improve readability */
+  text-align: center;
+}
+
+
+
+.section {
+  display: flex; /* Enables Flexbox */
+  justify-content: space-between; /* Spaces out the flex items */
+  align-items: center; /* Vertically centers the flex items in the container */
+  margin: 0 auto; /* Centers the section horizontally */
+  padding: 50px; /* Adds some padding around the content */
+  width: 90%; /* Adjust the width as needed */
+  max-width: 1200px; /* Ensures the section doesn't get too wide on large screens */
+}
+
+.section img {
+  width: auto; /* Keeps the image's aspect ratio */
+  height: 250px; /* Example height, adjust as needed */
+  margin-left: 20px; /* Adds some space between the image and the text */
+}
+
+.text-content {
+  flex-grow: 1; /* Allows the text content to fill the remaining space */
+}
+
+.text-content p{
+  text-align: left; /* Aligns the text to the left */
+}
+
+.text-content h2{
+  margin-left: 65px;
+  margin-top: 0;
+}
+
+
+.button {
+  background-color: #015f19;
+  border: 2px solid #ffffff;
+  color: rgb(255, 255, 255);
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 16px;
+  font-family: Trirong, serif
+}
+
+.button:hover {
+  background-color: #f1f1f1;
+  border: 2px solid #015f19;
+  color: #015f19;
+}
+
+
+
+
+
+
+
+
+/* Container holding the galleries */
+.gallery-container {
+  display: flex; /* Use flexbox layout */
+  justify-content: center; /* Center items horizontally */
+  flex-wrap: nowrap; /* Prevent wrapping to a new line */
+  overflow-x: auto; /* Enable horizontal scrolling */
+  gap: 20px; /* Optional: adds space between gallery items */
+}
+
+.gallery {
+  flex: 0 0 auto; /* Prevent flex items from growing or shrinking */
+}
+
+.gallery img {
+  max-width: 100%; /* Ensure the image is responsive within its container */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.desc {
+  text-align: center; /* Center-align the text description */
+}
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 768px) {
+  p {
+    width: 95%;
+    padding: 15px;
+  }
+
+  .section {
+    flex-direction: column; /* Stacks flex items vertically */
+    text-align: center; /* Centers the text */
+  }
+
+  .section img {
+    margin-right: 0; /* Removes the right margin */
+    margin-bottom: 20px; /* Adds some space below the image */
+    width: 100%; /* Makes the image full width */
+    height: auto; /* Adjust height automatically */
+  }
+
+  .text-content {
+    /* No specific adjustments needed here unless you want to change text size, etc. */
+  }
+}
